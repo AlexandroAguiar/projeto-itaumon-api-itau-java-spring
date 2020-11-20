@@ -52,7 +52,7 @@ public class UsuarioController {
 		return ResponseEntity.ok(objeto);
 	}
 
-	@PostMapping("/login")
+	@PostMapping("/usuario/login")
 	public ResponseEntity<Usuario> logar(@RequestBody Usuario objeto){
 		Usuario users = null;
 		users = dao.findByEmailAndSenha(objeto.getEmail(),objeto.getSenha() );
